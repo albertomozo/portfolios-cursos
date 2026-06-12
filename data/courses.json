@@ -1,23 +1,16 @@
 [
   {
-    "id": "curso-html-css",
-    "name": "Curso de HTML y CSS",
-    "dataFile": "data/curso-html-css.json",
-    "startDate": "2025-09-01",
-    "description": "Aprende estructuras HTML, diseño con CSS y layouts responsivos."
+    "id": "td-20260520",
+    "name": "Herramientas de IA",
+    "dataFile": "data/curso-td-20260520.json",
+    "startDate": "2026-05-20",
+    "description": "Aprende a usar la IA paar mejorar tu productividad."
   },
   {
-    "id": "curso-javascript",
-    "name": "Curso de JavaScript",
-    "dataFile": "data/curso-javascript.json",
-    "startDate": "2025-10-01",
-    "description": "Domina la lógica, el DOM y la programación dinámica en el navegador."
-  },
-  {
-    "id": "curso-react",
-    "name": "Curso de React",
-    "dataFile": "data/curso-react.json",
-    "startDate": "2025-11-01",
-    "description": "Construye interfaces modernas y componentes reutilizables con React."
+    "id": "chatgpt-20260524",
+    "name": "Iniciación a CHATGPT",
+    "dataFile": "data/chatgpt-20260524.json",
+    "startDate": "2026-05-24",
+    "description": "Visión amplia de herramientas IA."
   }
 ]
