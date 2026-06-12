@@ -1,0 +1,13 @@
+{
+  "courseId": "curso-react",
+  "projects": [
+    {
+      "title": "Dashboard dinámico",
+      "url": "https://example.com/react/dashboard"
+    },
+    {
+      "title": "Galería de imágenes",
+      "url": "https://example.com/react/galeria"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "courseId": "curso-javascript",
+  "projects": [
+    {
+      "title": "To-do app",
+      "url": "https://example.com/javascript/todo"
+    },
+    {
+      "title": "Juego de memoria",
+      "url": "https://example.com/javascript/memo"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "courseId": "curso-html-css",
+  "projects": [
+    {
+      "title": "Página personal",
+      "url": "https://example.com/html-css/personal"
+    },
+    {
+      "title": "Landing page",
+      "url": "https://example.com/html-css/landing"
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Curso</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 2rem; background: #f4f7fb; color: #222; }
+    main { max-width: 700px; margin: 0 auto; background: white; padding: 1.5rem; border-radius: 10px; box-shadow: 0 2px 12px rgba(0,0,0,.08); }
+    h1 { margin-bottom: 0.5rem; }
+    .meta { margin: 0.25rem 0 1rem 0; color: #555; }
+    ul { padding-left: 1.2rem; }
+    li { margin: 0.75rem 0; }
+    a { color: #007acc; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .back-link { margin-top: 1.5rem; display: inline-block; }
+    .error { color: #d9534f; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1 id="course-name">Curso</h1>
+    <p id="course-description" class="meta"></p>
+    <p id="course-start" class="meta"></p>
+    <h2>Proyectos</h2>
+    <ul id="projects"></ul>
+    <p><a class="back-link" href="../index.html">← Volver a lista de cursos</a></p>
+    <p id="error-message" class="error"></p>
+  </main>
+
+  <script>
+    function getQueryParam(name) {
+      const params = new URLSearchParams(window.location.search);
+      return params.get(name);
+    }
+
+    async function loadCourse() {
+      const courseId = getQueryParam('id');
+      if (!courseId) {
+        throw new Error('No se especificó el curso. Usa ?id=curso-html-css');
+      }
+
+      const coursesResponse = await fetch('../data/courses.json');
+      const courses = await coursesResponse.json();
+      const course = courses.find(item => item.id === courseId);
+      if (!course) {
+        throw new Error('No se encontró el curso solicitado.');
+      }
+
+      document.title = course.name;
+      document.getElementById('course-name').textContent = course.name;
+      document.getElementById('course-description').textContent = course.description;
+      document.getElementById('course-start').textContent = `Fecha de inicio: ${course.startDate}`;
+
+      const projectsResponse = await fetch(`../${course.dataFile}`);
+      const courseData = await projectsResponse.json();
+      const projectsList = document.getElementById('projects');
+
+      courseData.projects.forEach(project => {
+        const item = document.createElement('li');
+        item.innerHTML = `<a href="${project.url}" target="_blank" rel="noopener noreferrer">${project.title}</a>`;
+        projectsList.appendChild(item);
+      });
+    }
+
+    loadCourse().catch(error => {
+      document.getElementById('error-message').textContent = error.message;
+      console.error(error);
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+[
+  {
+    "id": "curso-html-css",
+    "name": "Curso de HTML y CSS",
+    "dataFile": "data/curso-html-css.json",
+    "startDate": "2025-09-01",
+    "description": "Aprende estructuras HTML, diseño con CSS y layouts responsivos."
+  },
+  {
+    "id": "curso-javascript",
+    "name": "Curso de JavaScript",
+    "dataFile": "data/curso-javascript.json",
+    "startDate": "2025-10-01",
+    "description": "Domina la lógica, el DOM y la programación dinámica en el navegador."
+  },
+  {
+    "id": "curso-react",
+    "name": "Curso de React",
+    "dataFile": "data/curso-react.json",
+    "startDate": "2025-11-01",
+    "description": "Construye interfaces modernas y componentes reutilizables con React."
+  }
+]
